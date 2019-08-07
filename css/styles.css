@@ -15,7 +15,21 @@ p {
     font-size: 14px;
     line-height: 2;
 }
-
+.boton {
+    background-color: #00B8E4;
+    padding: 10px 60px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color .3s ease-in-out;
+}
+.boton:hover {
+    background-color: rgb(0, 131, 164);
+}
 /** Header **/
 .site-header {
     padding: 20px 0;
@@ -52,7 +66,10 @@ p {
 }
 
 /** Contenedores Principal **/
-.contenido-principal, 
+.contenido-principal {
+    margin-top: 20px;
+}
+.contenido-principal,
 .sidebar {
     padding: 20px;
 }
@@ -65,6 +82,8 @@ p {
     .sidebar {
         width: 30%;
         float: right;
+        padding: 0;
+        margin-top: 40px;
     }
 }
 
@@ -74,7 +93,10 @@ h2 {
     margin-bottom: 20px;
 }
 .entrada {
-    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.entrada:last-of-type {
+    margin-bottom: 0;
 }
 .entrada img {
     display: block;
@@ -85,4 +107,61 @@ h2 {
         float: left;
         margin: 0 30px 0 0;
     }
+}
+.entrada p {
+    text-align: justify;
+}
+
+/** Sidebar **/
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 10px 10px 10px 0;
+}
+.sidebar ul li:hover {
+    background-color: #00B8E4;
+}
+.sidebar ul li a {
+    color: #00B8E4;
+    font-size: 18px;
+    text-decoration: none;
+}
+.sidebar ul li:hover a {
+    color: #ffffff;
+}
+
+/** Footer **/
+.footer-sitio {
+    background-color: #DB008D;
+    padding-top: 40px;
+    margin-top: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+.footer-sitio h2 {
+    color: #ffffff;
+}
+.footer-sitio a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 10px;
+}
+@media (min-width: 768px) {
+    .footer-sitio .nosotros {
+        float: left;
+        width: 50%;
+        text-align: left;
+    }
+    .footer-sitio .menu {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
+.copyright {
+    background-color: rgb(128, 1, 75);
+    padding: 20px;
 }
