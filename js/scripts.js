@@ -1,7 +1,22 @@
 (function () {
     'use strict';
-    document.addEventListener('DOMContentLoaded', function () {
+    //document.addEventListener('DOMContentLoaded', function () {
       
+      // JQUERY
+      $('.nuestros-servicios div:first').show();
+      $('.servicios nav a:first').addClass('activo');
+
+      $('.servicios nav a').on('click', mostrarTabs);
+
+      function mostrarTabs() {
+        $('.servicios nav a').removeClass('activo');
+        $(this).addClass('activo');
+        var enlace = $(this).attr('href');
+        $('.nuestros-servicios div').fadeOut();
+        $(enlace).show();
+        return false;
+      }
+
       // Get elementById
       /*
       var logo = document.getElementById('logo');
@@ -57,6 +72,7 @@
       */    
 
       // Añadir contenido
+      /*
       var sidebar = document.querySelector('aside');
 
       var masVisitados = document.createElement('H2');
@@ -72,6 +88,7 @@
         nuevoElemento.appendChild(nuevoTexto);
         sidebar.insertBefore(nuevoElemento, sidebar.childNodes[1]);
       }
+      */
 
       // Eliminar contenido
       /*
@@ -91,5 +108,5 @@
       var nuevoNodo = document.querySelector('footer h2');
       viejoNodo.parentNode.replaceChild(nuevoNodo, viejoNodo);
       */
-    });
+    //});
 })();
