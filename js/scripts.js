@@ -13,7 +13,7 @@
         $(this).addClass('activo');
         var enlace = $(this).attr('href');
         $('.nuestros-servicios div').fadeOut();
-        $(enlace).show();
+        $(enlace).fadeIn();
         return false;
       }
 
